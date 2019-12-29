@@ -21,6 +21,7 @@ class LottoActivity : BaseActivity() {
 
 
     val mHandler = Handler()
+    var isNowBuyingLotto = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,7 +40,19 @@ class LottoActivity : BaseActivity() {
         }
 
         buyAutoLottoBtn.setOnClickListener {
-            buyLottoLoop()
+
+            if (!isNowBuyingLotto) {
+                buyLottoLoop()
+                isNowBuyingLotto = true
+                buyAutoLottoBtn.text = "자동구매 일시 정지"
+            }
+            else {
+//                구매를 중단시켜야함.
+                mHandler.removeCallbacks(buyingLottoRunnable)
+                isNowBuyingLotto = false
+                buyAutoLottoBtn.text = "자동구매 재개"
+            }
+
         }
 
     }
