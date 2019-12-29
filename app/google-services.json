@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "189650137668",
+    "firebase_url": "https://lottosimulator-11103.firebaseio.com",
+    "project_id": "lottosimulator-11103",
+    "storage_bucket": "lottosimulator-11103.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:189650137668:android:48b1a26c02f6f40966c211",
+        "android_client_info": {
+          "package_name": "com.tjeit.a201912_finaltest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "189650137668-robk1jlfue9d2mvg8an9s4dh1hraaoig.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.tjeit.a201912_finaltest",
+            "certificate_hash": "668881840769bdb7d43d44541bcc0d029106d5d6"
+          }
+        },
+        {
+          "client_id": "189650137668-02c8ghuuprglrgjehanf6ujrd8tbirde.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdaMR-hk-Ql0pq3G2UIEDgJ4qRFrrLpvw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "189650137668-02c8ghuuprglrgjehanf6ujrd8tbirde.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
