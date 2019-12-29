@@ -1,8 +1,7 @@
 package com.tjeit.a201912_finaltest
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_lotto.*
 import java.util.*
 import kotlin.collections.ArrayList
@@ -10,6 +9,7 @@ import kotlin.collections.ArrayList
 class LottoActivity : BaseActivity() {
 
     val winLottoNumArr = ArrayList<Int>()
+    val winLottoNumTextViewList = ArrayList<TextView>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -63,13 +63,26 @@ class LottoActivity : BaseActivity() {
 //        Collections 클래스의 기능을 이용해서 ArrayList 내부의 값을 정렬 기능 이용.
         Collections.sort(winLottoNumArr)
 
-        for (num in winLottoNumArr) {
-            Log.d("당첨번호", num.toString())
+//        6개의 당첨번호 / 각자리의 텍스트뷰를 매칭 for문
+        for (i in 0..5) {
+//            상황에 맞는 텍스트뷰 / 당첨번호를 뽑아와서
+            val tempTextView = winLottoNumTextViewList.get(i)
+            val winNum = winLottoNumArr.get(i)
+
+//            값으로 세팅
+            tempTextView.text = winNum.toString()
         }
 
     }
 
     override fun setValues() {
+
+        winLottoNumTextViewList.add(lottoNumTxt01)
+        winLottoNumTextViewList.add(lottoNumTxt02)
+        winLottoNumTextViewList.add(lottoNumTxt03)
+        winLottoNumTextViewList.add(lottoNumTxt04)
+        winLottoNumTextViewList.add(lottoNumTxt05)
+        winLottoNumTextViewList.add(lottoNumTxt06)
 
     }
 
