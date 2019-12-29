@@ -18,6 +18,9 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
 
     }
 
+//    토큰이 새로 발급될 때만 실행되는 함수.
+//    이미 토큰이 발급된 상태에서는 실행되지 않는다.
+//      => 새로 발급 : 삭제 후 재설치 같은 큰 변화가 있는 상황에서만 새로발급.
     override fun onNewToken(token: String?) {
         super.onNewToken(token)
 
