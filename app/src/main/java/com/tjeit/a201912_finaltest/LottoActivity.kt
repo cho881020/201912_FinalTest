@@ -23,6 +23,14 @@ class LottoActivity : BaseActivity() {
     val mHandler = Handler()
     var isNowBuyingLotto = false
 
+
+    var firstRankCount = 0
+    var secondRankCount = 0
+    var thirdRankCount = 0
+    var fourthRankCount = 0
+    var fifthRankCount = 0
+    var noRankCount = 0
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lotto)
@@ -119,6 +127,7 @@ class LottoActivity : BaseActivity() {
         if (correctCount == 6) {
 //            1등 당첨 => 당첨금액 += 50억
             totalWinMoney += 5000000000
+            firstRankCount++
         }
         else if (correctCount == 5) {
 
@@ -140,34 +149,49 @@ class LottoActivity : BaseActivity() {
             if (isSecondRank) {
 //                2등 당첨 => 당첨금액 += 5천만원
                 totalWinMoney += 50000000
+                secondRankCount++
 
             }
             else {
 
 //            3등 당첨 => 당첨금액 += 150만원
                 totalWinMoney += 1500000
+                thirdRankCount++
             }
 
         }
         else if (correctCount == 4) {
 //            4등 당첨 => 당첨금액 += 5만원
             totalWinMoney += 50000
+            fourthRankCount++
         }
         else if (correctCount == 3) {
 //            5등 당첨 => 당첨금액 += 5천원
             totalWinMoney += 5000
+            fifthRankCount++
         }
         else {
 //            꽝! => 당첨금액 변화 없음
+            noRankCount++
         }
 
-//       금액을 세자리마다 ,를 찍도록 가공
+//       당첨금액을 세자리마다 ,를 찍도록 가공
         totalWinMoneyTxt.text = String.format("%,d 원", totalWinMoney)
 
 
 //        사용금액 : 한장 살때마다 천원씩 증가.
         usedMoney += 1000
         usedMoneyTxt.text = String.format("%,d 원", usedMoney)
+
+//        각 등수의 횟수를 적어주자.
+
+        firstRankCountTxt.text = "${firstRankCount} 회"
+        secondRankCountTxt.text = "${secondRankCount} 회"
+        thirdRankCountTxt.text = "${thirdRankCount} 회"
+        fourthRankCountTxt.text = "${fourthRankCount} 회"
+        fifthRankCountTxt.text = "${fifthRankCount} 회"
+        noRankCountTxt.text = "${noRankCount} 회"
+
     }
 
     fun makeWinLottoNum() {

@@ -206,4 +206,127 @@
     </LinearLayout>
 
 
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1등 당첨 횟수 - " />
+
+        <TextView
+            android:id="@+id/firstRankCountTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0회" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2등 당첨 횟수 - " />
+
+        <TextView
+            android:id="@+id/secondRankCountTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0회" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3등 당첨 횟수 - " />
+
+        <TextView
+            android:id="@+id/thirdRankCountTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0회" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4등 당첨 횟수 - " />
+
+        <TextView
+            android:id="@+id/fourthRankCountTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0회" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5등 당첨 횟수 - " />
+
+        <TextView
+            android:id="@+id/fifthRankCountTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0회" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="낙첨 횟수 - " />
+
+        <TextView
+            android:id="@+id/noRankCountTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0회" />
+
+
+    </LinearLayout>
+
+
+
 </LinearLayout>
