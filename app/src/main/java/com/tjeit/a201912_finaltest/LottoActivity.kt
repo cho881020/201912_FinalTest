@@ -259,6 +259,10 @@ class LottoActivity : BaseActivity() {
 //            만약 중복OK 가 true로 살아남았다면 써도 된다.
             if (isDuplOk) {
                 bonusNumber = tempNum
+
+//                만든 보너스번호를 화면에 반영.
+                bonusNumTxt.text = bonusNumber.toString()
+
 //                제약조건에 맞는 숫자를 찾았으니 무한반복 종료
                 break
             }
