@@ -89,12 +89,13 @@ class LottoActivity : BaseActivity() {
 //            꽝! => 당첨금액 변화 없음
         }
 
-        totalWinMoneyTxt.text = totalWinMoney.toString()
+//       금액을 세자리마다 ,를 찍도록 가공
+        totalWinMoneyTxt.text = String.format("%,d 원", totalWinMoney)
 
 
 //        사용금액 : 한장 살때마다 천원씩 증가.
         usedMoney += 1000
-        usedMoneyTxt.text = usedMoney.toString()
+        usedMoneyTxt.text = String.format("%,d 원", usedMoney)
     }
 
     fun makeWinLottoNum() {
